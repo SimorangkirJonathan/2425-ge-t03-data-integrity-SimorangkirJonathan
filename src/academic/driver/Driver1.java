@@ -63,10 +63,10 @@ public class Driver1 {
         for (int i = courseCount - 1; i >= 0; i--) {
             System.out.println(courses[i].toString());
         }
-        for (int i = studentCount - 1; i >= 0; i--) {
+        for (int i = 0; i < studentCount; i++) {
             System.out.println(students[i].toString());
         }
-        for (int i = enrollmentCount - 1; i >= 0; i--) {
+        for (int i = 0 ; i < enrollmentCount; i++) {
             System.out.println(enrollments[i].toString());
         }
     }
