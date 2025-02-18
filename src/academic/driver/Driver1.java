@@ -1,7 +1,6 @@
 package academic.driver;
 
 import java.util.Scanner;
-import java.util.Stack;
 import academic.model.Course;
 import academic.model.Student;
 import academic.model.Enrollment;
@@ -13,19 +12,20 @@ import academic.model.Enrollment;
 public class Driver1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Stack<Course> courseStack = new Stack<>();
-        Stack<Student> studentStack = new Stack<>();
-        Stack<Enrollment> enrollmentStack = new Stack<>();
+        Course[] courses = new Course[100];
+        Student[] students = new Student[100];
+        Enrollment[] enrollments = new Enrollment[100];
+        int courseCount = 0, studentCount = 0, enrollmentCount = 0;
 
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("---")) {
                 break;
             }
-
+            
             String[] data = input.split("#");
             String type = data[0];
-
+            
             switch (type) {
                 case "course-add":
                     if (data.length == 5) {
@@ -33,7 +33,7 @@ public class Driver1 {
                         String courseID = data[2];
                         int sks = Integer.parseInt(data[3]);
                         String grade = data[4];
-                        courseStack.push(new Course(nim, courseID, sks, grade));
+                        courses[courseCount++] = new Course(nim, courseID, sks, grade);
                     }
                     break;
                 case "student-add":
@@ -42,7 +42,7 @@ public class Driver1 {
                         String name = data[2];
                         int year = Integer.parseInt(data[3]);
                         String program = data[4];
-                        studentStack.push(new Student(nim, name, year, program));
+                        students[studentCount++] = new Student(nim, name, year, program);
                     }
                     break;
                 case "enrollment-add":
@@ -51,22 +51,23 @@ public class Driver1 {
                         String nim2 = data[2];
                         String year = data[3];
                         String term = data[4];
-                        String status = "None";
-                        enrollmentStack.push(new Enrollment(nim, nim2, year, term, status));
+                        String status = "None"; 
+                        enrollments[enrollmentCount++] = new Enrollment(nim, nim2, year, term, status);
                     }
                     break;
             }
         }
         scanner.close();
 
-        while (!courseStack.isEmpty()) {
-            System.out.println(courseStack.pop().toString());
+       
+        for (int i = courseCount - 1; i >= 0; i--) {
+            System.out.println(courses[i].toString());
         }
-        while (!studentStack.isEmpty()) {
-            System.out.println(studentStack.pop().toString());
+        for (int i = studentCount - 1; i >= 0; i--) {
+            System.out.println(students[i].toString());
         }
-        while (!enrollmentStack.isEmpty()) {
-            System.out.println(enrollmentStack.pop().toString());
+        for (int i = enrollmentCount - 1; i >= 0; i--) {
+            System.out.println(enrollments[i].toString());
         }
     }
 }
