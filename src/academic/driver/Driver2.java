@@ -92,7 +92,7 @@ public class Driver2 {
         for (String invalidStudent : invalidStudents) {
             System.out.println("invalid student|" + invalidStudent);
         }
-        for (int i = 0; i < courseCount; i++) {
+        for (int i = courseCount - 1; i >= 0; i--) {
             System.out.println(courses[i].toString());
         }
         for (int i = 0; i < studentCount; i++) {
