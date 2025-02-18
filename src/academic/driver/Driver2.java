@@ -86,13 +86,13 @@ public class Driver2 {
         }
         scanner.close();
 
-        for (String invalidCourse : invalidCourses) {
-            System.out.println("invalid course|" + invalidCourse);
-        }
         for (String invalidStudent : invalidStudents) {
             System.out.println("invalid student|" + invalidStudent);
         }
-        for (int i = courseCount - 1; i >= 0; i--) {
+        for (String invalidCourse : invalidCourses) {
+            System.out.println("invalid course|" + invalidCourse);
+        }
+        for (int i = 0; i < courseCount; i++) {
             System.out.println(courses[i].toString());
         }
         for (int i = 0; i < studentCount; i++) {
