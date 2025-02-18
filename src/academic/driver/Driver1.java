@@ -51,7 +51,7 @@ public class Driver1 {
                         String nim2 = data[2];
                         String year = data[3];
                         String term = data[4];
-                        String status = "None"; // Nilai default untuk status
+                        String status = "None";
                         enrollmentStack.push(new Enrollment(nim, nim2, year, term, status));
                     }
                     break;
