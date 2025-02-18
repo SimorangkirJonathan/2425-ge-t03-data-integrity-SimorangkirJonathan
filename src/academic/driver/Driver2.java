@@ -64,7 +64,7 @@ public class Driver2 {
                         
                         boolean studentExists = false;
                         for (int i = 0; i < studentCount; i++) {
-                            if (students[i].getStudentId().equals(studentId)) {
+                            if (students[i].getstudentId().equals(studentId)) {
                                 studentExists = true;
                                 break;
                             }

@@ -50,9 +50,9 @@ public class Driver1 {
                         String nim = data[1];
                         String nim2 = data[2];
                         String year = data[3];
-                        String prodi = data[4];
+                        String term = data[4];
                         String status = "None"; 
-                        enrollments[enrollmentCount++] = new Enrollment(nim, nim2, year, prodi, status);
+                        enrollments[enrollmentCount++] = new Enrollment(nim, nim2, year, term, status);
                     }
                     break;
             }
