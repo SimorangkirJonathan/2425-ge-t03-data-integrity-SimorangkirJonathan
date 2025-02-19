@@ -17,7 +17,7 @@ public class Driver1 {
         Enrollment[] enrollments = new Enrollment[100];
         int courseCount = 0;
         int studentCount = 0;
-        int enrollmentCount = 0;DWA
+        int enrollmentCount = 0;
 
         while (true) {
             String input = scanner.nextLine();
@@ -35,7 +35,9 @@ public class Driver1 {
                             String name = parts[2];
                             String credits = parts[3];
                             String passingGrade = parts[4];
-                            courses[courseCount++] = new Course(code, name, credits,passingGrade); // untuk menambahkan data ke array courses 
+                            courses[courseCount++] = new Course(code, name, credits, passingGrade); // untuk menambahkan
+                                                                                                    // data ke array
+                                                                                                    // courses
                         }
                         break;
                     case "student-add":
@@ -54,7 +56,8 @@ public class Driver1 {
                             String year = parts[3];
                             String semester = parts[4];
                             String notes = "None";
-                            enrollments[enrollmentCount++] = new Enrollment(courseCode, studentId, year, semester, notes);
+                            enrollments[enrollmentCount++] = new Enrollment(courseCode, studentId, year, semester,
+                                    notes);
                         }
                         break;
                 }
@@ -69,8 +72,7 @@ public class Driver1 {
         for (int i = 0; i < studentCount; i++) {
             System.out.println(students[i]);
         }
-        
-        
+
         for (int i = 0; i < enrollmentCount; i++) {
             System.out.println(enrollments[i]);
         }

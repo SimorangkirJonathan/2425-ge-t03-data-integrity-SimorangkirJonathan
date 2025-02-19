@@ -1,14 +1,11 @@
 package academic.model;
 
-
-
 /**
  * @author 12S23030 - Simorangkir Jonathan
  * @author 12S23046 - Anastasya T.B Siahaan
  */
- 
 
- public class Student {
+public class Student {
     private String code;
     private String name;
     private String years;
@@ -19,28 +16,27 @@ package academic.model;
         this.name = name;
         this.years = years;
         this.major = major;
-        }
+    }
 
-        public String getCode() {
+    public String getCode() {
         return code;
-        }
+    }
 
-        public String getName() {
+    public String getName() {
         return name;
-        }
+    }
 
-        public String getYears() {
+    public String getYears() {
         return years;
-        }
+    }
 
-        public String getMajor() {
+    public String getMajor() {
         return major;
-        }
+    }
 
-   
     @Override
     public String toString() {
         return code + "|" + name + "|" + years + "|" + major;
     }
 
-        };
+};

@@ -39,40 +39,40 @@ public class Driver2 {
                         String name = data[2];
                         String credits = data[3];
                         String grade = data[4];
-                        courses[courseCount++] =  new Course(code, name, credits, grade);     
+                        courses[courseCount++] = new Course(code, name, credits, grade);
                     }
                     break;
                 case "student-add":
                     if (data.length == 5) {
                         String code = data[1];
-                            String name = data[2];
-                            String year = data[3];
-                            String major = data[4];
-                            students[studentCount++] = new Student(code, name, year, major);
+                        String name = data[2];
+                        String year = data[3];
+                        String major = data[4];
+                        students[studentCount++] = new Student(code, name, year, major);
                     }
                     break;
                 case "enrollment-add":
                     if (data.length == 5) {
                         String coursecode = data[1];
                         String studentnim = data[2];
-                        
+
                         boolean courseExists = false;
                         boolean studentExists = false;
-                        
+
                         for (int i = 0; i < courseCount; i++) {
                             if (courses[i].getCode().equals(coursecode)) {
                                 courseExists = true;
                                 break;
                             }
                         }
-                        
+
                         for (int i = 0; i < studentCount; i++) {
                             if (students[i].getCode().equals(studentnim)) {
                                 studentExists = true;
                                 break;
                             }
                         }
-                        
+
                         if (!courseExists) {
                             invalidEntries.append("invalid course|").append(coursecode).append("\n");
                         } else if (!studentExists) {
@@ -83,8 +83,9 @@ public class Driver2 {
                             String year = data[3];
                             String semester = data[4];
                             String Notes = "None";
-                            enrollments[enrollmentCount++] = new Enrollment(courseCode, studentId, year, semester, Notes);
-                           
+                            enrollments[enrollmentCount++] = new Enrollment(courseCode, studentId, year, semester,
+                                    Notes);
+
                         }
                     }
                     break;
@@ -97,20 +98,17 @@ public class Driver2 {
 
         System.out.print(invalidEntries.toString());
 
-      
         for (int i = courseCount - 1; i >= 0; i--) {
             System.out.println(courses[i].toString());
         }
 
-
-        for (int i = 0 ; i < studentCount ; i++) {
+        for (int i = 0; i < studentCount; i++) {
             System.out.println(students[i].toString());
         }
-
 
         for (int i = 0; i < enrollmentCount; i++) {
             System.out.println(enrollments[i].toString());
         }
-        
+
     }
 }

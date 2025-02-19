@@ -36,6 +36,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return  code + '|' + name + '|' + credit +'|' + passingGrade;
-            }
+        return code + '|' + name + '|' + credit + '|' + passingGrade;
+    }
 }
