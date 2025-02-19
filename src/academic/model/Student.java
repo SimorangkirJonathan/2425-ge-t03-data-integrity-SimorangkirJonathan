@@ -1,41 +1,46 @@
 package academic.model;
 
+
+
 /**
  * @author 12S23030 - Simorangkir Jonathan
- * @author 12S23046- Anastasya T.B Siahaan
+ * @author 12S23046 - Anastasya T.B Siahaan
  */
-public class Student {
-    private String NIM;
-    private String nama;
-    private int tahun;
-    private String prodi;
+ 
 
-    public Student(String _NIM, String _nama, int _tahun, String _prodi) {
-        this.NIM = _NIM;
-        this.nama = _nama;
-        this.tahun = _tahun;
-        this.prodi = _prodi;
-    }
+ public class Student {
+    private String code;
+    private String name;
+    private String years;
+    private String major;
 
-    public String getNIM() {
-        return NIM;
-    }
+    public Student(String code, String name, String years, String major) {
+        this.code = code;
+        this.name = name;
+        this.years = years;
+        this.major = major;
+        }
 
-    public String getnama() {
-        return nama;
-    }
+        public String getCode() {
+        return code;
+        }
 
-    public int gettahun() {
-        return tahun;
-    }
+        public String getName() {
+        return name;
+        }
 
-    public String getprodi() {
-        return prodi;
-    }
+        public String getYears() {
+        return years;
+        }
 
+        public String getMajor() {
+        return major;
+        }
+
+   
     @Override
     public String toString() {
-        return (NIM + "|" + nama + "|" + tahun + "|" + prodi);
+        return code + "|" + name + "|" + years + "|" + major;
     }
 
-}
+        };

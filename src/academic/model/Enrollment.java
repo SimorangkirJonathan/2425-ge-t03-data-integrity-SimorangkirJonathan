@@ -1,42 +1,42 @@
 package academic.model;
-
+/**
+ * @author 12S23030 - Simorangkir Jonathan
+ * @author 12S23046 - Anastasya T.B Siahaan
+ */
 public class Enrollment {
-    private String NIM;
-    private String NIM2;
-    private String tahun;
-    private String prodi;
-    private String status;
+    private String code;
+    private String nim;
+    private String years;
+    private String kejadian;
+    private String notes;
 
-    public Enrollment(String _NIM, String _NIM2, String _tahun, String _prodi, String _status) {
-        this.NIM = _NIM;
-        this.NIM2 = _NIM2;
-        this.tahun = _tahun;
-        this.prodi = _prodi;
-        this.status = _status;
+    public Enrollment(String code, String nim, String years, String kejadian, String notes) {
+        this.code = code;
+        this.nim = nim;
+        this.years = years;
+        this.notes = notes;
+        this.kejadian = kejadian;
     }
 
-    public String getNIM() {
-        return NIM;
+    public String getCode() {
+        return code;
     }
 
-    public String getNIM2() {
-        return NIM2;
+    public String getNim() {
+        return nim;
     }
 
-    public String getTahun() {
-        return tahun;
+    public String getYears() {
+        return years;
     }
 
-    public String getProdi() {
-        return prodi;
-    }
-
-    public String getStatus() {
-        return status;
+    public String getNotes() {
+        return notes;
     }
 
     @Override
     public String toString() {
-        return NIM + "|" + NIM2 + "|" + tahun + "|" + prodi + "|" + status;
+        return code + "|" + nim + "|" + years + "|" + kejadian + "|" + notes;
     }
+
 }
