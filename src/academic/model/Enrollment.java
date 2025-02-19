@@ -15,12 +15,25 @@ public class Enrollment {
         this.status = _status;
     }
 
-    
-    public String getNIM() { return NIM; }
-    public String getNIM2() { return NIM2; }
-    public String getTahun() { return tahun; }
-    public String getProdi() { return prodi; }
-    public String getStatus() { return status; }
+    public String getNIM() {
+        return NIM;
+    }
+
+    public String getNIM2() {
+        return NIM2;
+    }
+
+    public String getTahun() {
+        return tahun;
+    }
+
+    public String getProdi() {
+        return prodi;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 
     @Override
     public String toString() {
